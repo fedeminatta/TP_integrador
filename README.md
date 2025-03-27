@@ -1,6 +1,6 @@
-## TP Integrador
+# TP Integrador
 
-# Integrantes:
+#### Integrantes:
 
 - Benjamin Vallory
 - Fede Minatta
