@@ -1,79 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>IDW S.A - Contacto</title>
-        <link rel="stylesheet" href="styles.css" />
-      </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDW S.A - Contacto</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
 <body>
-    <header>
-        <div class="container">
-          <h1>IDW S.A</h1>
-          <nav>
-            <a href="index.html">Inicio</a>
-            <a href="#">Ver Salones</a>
-            <a href="contacto.html">Contacto</a>
-          </nav>
+  <header>
+    <div class="container">
+      <h1>IDW S.A</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="#">Ver Salones</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contacto-page">
+    <section class="info-contacto">
+      <div class="info-y-mapa">
+        <div class="datos-contacto">
+          <h2>Datos de contacto</h2>
+          <p><strong>Dirección:</strong> Av. Siempreviva 123, Entre Rios
+            Concordia</p>
+          <p><strong>Teléfono:</strong> +54 345 1234-5678</p>
+          <p><strong>Email:</strong> contacto_eventos@idwsa.com</p>
+          <p><strong>Horario de atención:</strong> Lunes a Viernes de 9:00 a
+            18:00</p>
         </div>
-      </header>
-      
-      <main class="container contacto-page">
-        <section class="info-contacto">
-            <div class="info-y-mapa">
-              <div class="datos-contacto">
-                <h2>Datos de contacto</h2>
-                <p><strong>Dirección:</strong> Av. Siempreviva 123, Entre Rios Concordia</p>
-                <p><strong>Teléfono:</strong> +54 345 1234-5678</p>
-                <p><strong>Email:</strong> contacto_eventos@idwsa.com</p>
-                <p><strong>Horario de atención:</strong> Lunes a Viernes de 9:00 a 18:00</p>
-              </div>
-              <div class="mapa-contacto">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.597148367471!2d-58.41942808476903!3d-34.61565448045671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb2b8d5a7c2b%3A0x9fa78a7a85a5b7a!2sAv.%20Siempreviva%20123%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1614375734904!5m2!1ses-419!2sar" 
-                  width="100%" 
-                  height="250" 
-                  style="border: 1rem; border-radius: 1rem;" 
-                  allowfullscreen="" 
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-              </div>
-            </div>
-          </section>
+        <div class="mapa-contacto">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.597148367471!2d-58.41942808476903!3d-34.61565448045671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb2b8d5a7c2b%3A0x9fa78a7a85a5b7a!2sAv.%20Siempreviva%20123%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1614375734904!5m2!1ses-419!2sar"
+            width="100%" height="250" style="border: 1rem; border-radius: 1rem;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
 
-          <section class="introduccion">
-            <h2>¿Tenés alguna duda o consulta?</h2>
-            <p>En IDW S.A. estamos para ayudarte a planificar el cumpleaños perfecto. Podés contactarnos por los medios que figuran arriba o completar el formulario para enviarnos tu mensaje.</p>
-          </section>
+    <section class="introduccion">
+      <h2>¿Tenés alguna duda o consulta?</h2>
+      <p>En IDW S.A. estamos para ayudarte a planificar el cumpleaños perfecto.
+        Podés contactarnos por los medios que figuran arriba o completar el
+        formulario para enviarnos tu mensaje.</p>
+    </section>
 
-        <section class="form-contacto">
-          <h2>Envíanos un mensaje</h2>
-          <form>
-            <label for="nombre">Nombre y Apellido:</label>
-            <input type="text" id="nombre" name="nombre" required />
-    
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required />
-    
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-            <div class="buttons">
-                <button type="submit" class="btn btn-outline">Enviar</button>
-            </div>
-            
-          </form>
-        </section>
+    <section class="form-contacto">
+      <h2>Envíanos un mensaje</h2>
+      <form>
+        <label for="nombre">Nombre y Apellido:</label>
+        <input type="text" id="nombre" name="nombre" required />
 
-        <section class="cta">
-            <p>🎉 <strong>¡Estamos listos para hacer que tu evento sea inolvidable!</strong></p>
-            <p>📞 <strong>No dudes en llamarnos o escribirnos para empezar a planear tu celebración.</strong></p>
-          </section>
-      </main>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        <div class="buttons">
+          <button type="submit" class="btn btn-outline">Enviar</button>
+        </div>
+
+      </form>
+    </section>
+
+    <section class="cta">
+      <p>🎉 <strong>¡Estamos listos para hacer que tu evento sea
+          inolvidable!</strong></p>
+      <p>📞 <strong>No dudes en llamarnos o escribirnos para empezar a planear
+          tu celebración.</strong></p>
+    </section>
+  </main>
 
 
-    <footer>
-        <p>&copy; 2025 IDW S.A. Todos los derechos reservados.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 IDW S.A. Todos los derechos reservados.</p>
+  </footer>
 </body>
+
 </html>
