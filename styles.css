@@ -128,3 +128,72 @@
     }
   }
   
+
+/* Página de contacto */
+.contacto-page {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contacto-page h2 {
+  color: #005b96;
+  margin-bottom: 1rem;
+}
+
+.info-contacto p {
+  margin-bottom: 0.5rem;
+}
+
+.form-contacto form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-contacto label {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+
+.form-contacto .btn {
+  align-self: flex-start;
+  margin-top: 1.5rem;
+}
+
+/* mapa */
+.info-y-mapa {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.datos-contacto {
+  flex: 1;
+}
+
+.mapa-contacto {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .info-y-mapa {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .mapa-contacto iframe {
+    height: 300px;
+  }
+}
+/* Fin mapa */
+
+/* Fin página de contacto */
