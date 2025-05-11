@@ -218,7 +218,8 @@ nav a:hover {
 
 .main_servicios {
 	background-color: rgb(250, 232, 232);
-	padding: 20px;
+	padding-inline: 20px;
+	padding-top: 80px;
 	padding-bottom: 60px;
 	width: 100%;
 	overflow-x: hidden;
