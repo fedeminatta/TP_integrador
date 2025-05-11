@@ -218,7 +218,8 @@ nav a:hover {
 
 .main_servicios {
 	background-color: rgb(250, 232, 232);
-	padding: 20px;
+	padding-inline: 20px;
+	padding-top: 80px;
 	padding-bottom: 60px;
 	width: 100%;
 	overflow-x: hidden;
@@ -257,6 +258,22 @@ nav a:hover {
 	height: 300px;
 	object-fit: cover;
 	border-radius: 4px;
+}
+
+.accordion-button {
+	background-color: #ffe5e5; /* rojo claro */
+	color: #a30000; /* texto en rojo oscuro */
+}
+
+.accordion-button:not(.collapsed) {
+	background-color: #ffcccc; /* cuando está abierto */
+	color: #a30000;
+	box-shadow: none;
+}
+
+.accordion-button:focus {
+	border-color: #ff6666;
+	box-shadow: 0 0 0 0.25rem rgba(255, 102, 102, 0.5);
 }
 
 /* ### FOOTER ### */
