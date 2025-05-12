@@ -17,45 +17,157 @@
 
 <body>
   <header>
-    <div class="container">
-      <h1>IDW S.A</h1>
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="informacion-institucional.html">Informacion Institucional</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <h1>IDW S.A</h1>
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="informacion-institucional.html">Información
+                Institucional</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main class="main_servicios">
     <h1>🎈 Nuestros Servicios 🎈</h1>
 
     <section class="section_servicios">
-      <article>
-        <img src="./img/decoracion.jpg" alt="Decoración temática">
-        <p>🎊 Decoración temática</p>
-        <a href="#">Ver más</a>
+      <article class="card">
+        <img class="card-img-top" src="./img/decoracion.jpg"
+          alt="Decoración temática">
+        <div class="card-body">
+          <h5 class="card-title">🎊 Decoración temática</h5>
+          <p class="card-text">Nos encargamos de ambientar el salón con
+            temáticas personalizadas, colores y personajes favoritos.</p>
+          <a class="btn btn-primary" href="#">Ver más</a>
+        </div>
       </article>
       <!--  -->
-      <article>
-        <img src="./img/animacion.jpg" alt="Decoración temática">
-        <p>🎭 Animación infantil</p>
-        <a href="#">Ver más</a>
+      <article class="card">
+        <img class="card-img-top" src="./img/animacion.jpg"
+          alt="Decoración temática">
+        <div class="card-body">
+          <h5 class="card-title">🎭 Animación infantil</h5>
+          <p class="card-text">Nos encargamos de entretener a los niños con
+            juegos, música, disfraces y animadores divertidos.</p>
+          <a class="btn btn-primary" href="#">Ver más</a>
+        </div>
       </article>
       <!--  -->
-      <article>
-        <img src="./img/catering.jpg" alt="Decoración temática">
-        <p>🍰 Catering para niños</p>
-        <a href="#">Ver más</a>
+      <article class="card">
+        <img class="card-img-top" src="./img/catering.jpg"
+          alt="Decoración temática">
+        <div class="card-body">
+          <h5 class="card-title">🍰 Catering para niños</h5>
+          <p class="card-text">Nos encargamos de ofrecer un menú ideal para los
+            más chicos, con opciones ricas y variadas.</p>
+          <a class="btn btn-primary" href="#">Ver más</a>
+        </div>
       </article>
       <!--  -->
-      <article>
-        <img src="./img/inflables.jpeg" alt="Decoración temática">
-        <p>🏰 Alquiler de inflables</p>
-        <a href="#">Ver más</a>
+      <article class="card">
+        <img class="card-img-top" src="./img/inflables.jpeg"
+          alt="Decoración temática">
+        <div class="card-body">
+          <h5 class="card-title">🏰 Alquiler de inflables</h5>
+          <p class="card-text">Nos encargamos de montar inflables seguros y
+            coloridos que garantizan horas de diversión.</p>
+          <a class="btn btn-primary" href="#">Ver más</a>
+        </div>
       </article>
     </section>
+
+
+    <h2 class="mb-3 mt-4">Preguntas frecuentes</h2>
+
+    <div class="accordion" id="faqAccordion">
+      <!-- Pregunta 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button"
+            data-bs-toggle="collapse" data-bs-target="#faq1"
+            aria-expanded="true" aria-controls="faq1">
+            ¿Puedo elegir la temática de la decoración?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show"
+          aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sí, ofrecemos varias temáticas personalizadas y también podemos
+            adaptarnos a la idea que tengas en mente.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button"
+            data-bs-toggle="collapse" data-bs-target="#faq2"
+            aria-expanded="false" aria-controls="faq2">
+            ¿Los animadores están capacitados para trabajar con niños?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse"
+          aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sí, todos nuestros animadores tienen experiencia en eventos
+            infantiles y están capacitados para brindar un ambiente seguro y
+            divertido.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button"
+            data-bs-toggle="collapse" data-bs-target="#faq3"
+            aria-expanded="false" aria-controls="faq3">
+            ¿Qué incluye el servicio de catering?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse"
+          aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Incluye snacks, bebidas, torta, opciones saladas y dulces, todo
+            adaptado a los gustos infantiles.
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button"
+            data-bs-toggle="collapse" data-bs-target="#faq4"
+            aria-expanded="false" aria-controls="faq4">
+            ¿Los inflables se pueden instalar en exteriores?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse"
+          aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sí, se pueden instalar en patios o jardines siempre que el clima lo
+            permita y haya espacio suficiente.
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
 
 
