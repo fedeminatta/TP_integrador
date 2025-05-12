@@ -159,16 +159,33 @@ nav a:hover {
 	margin-bottom: 0.5rem;
 }
 
+.form-control {
+    transition: all 0.3s ease;
+    border: 1px solid #ced4da;
+}
+
+.form-control:hover {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    background-color: #f8f9fa;
+}
+
 .form-contacto form {
 	margin-top: 1.5rem;
 	display: flex;
 	flex-direction: column;
 }
 
-.form-contacto label {
+.form-label {
 	margin-top: 1rem;
 	margin-bottom: 0.3rem;
 	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.form-label:hover{
+	color: #007bff; 
+    transform: translateX(5px); 
 }
 
 .form-contacto input,
@@ -197,7 +214,13 @@ nav a:hover {
 
 .mapa-contacto {
 	flex: 1;
+	transition: all 0.3s ease;
 }
+
+.mapa-contacto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
 
 @media (min-width: 768px) {
 	.info-y-mapa {
