@@ -1,4 +1,3 @@
-// verificar que exista la sesion sino mandamos al login al usuario
 if (sessionStorage.getItem('sesionIniciada') !== 'true') {
 	alert('Debes iniciar sesión primero');
 	window.location.href = 'login.html';
@@ -8,20 +7,18 @@ const salonForm = document.getElementById('salonForm');
 const btnGuardar = document.getElementById('guardarSalon');
 const tablaSalones = document.getElementById('tablaSalones');
 
-// Obtengo los salones del LS
 let salones = JSON.parse(localStorage.getItem('salones')) || [];
 
-// Mostrar salones en la tabla al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
 	renderizarTabla();
 });
-
 btnGuardar.addEventListener('click', () => {
 	const nombre = document.getElementById('nombre').value;
 	const capacidad = document.getElementById('capacidad').value;
 	const descripcion = document.getElementById('descripcion').value;
 	const precio = document.getElementById('precio').value;
 	const ubicacion = document.getElementById('ubicacion').value;
+	const imagenUrl = document.getElementById('imagenUrl').value;
 
 	const nuevoSalon = {
 		id: Date.now(),
@@ -30,9 +27,8 @@ btnGuardar.addEventListener('click', () => {
 		descripcion,
 		precio,
 		ubicacion,
+		imagenUrl
 	};
-
-	// Agregar a la lista y guardar en LS
 	salones.push(nuevoSalon);
 	localStorage.setItem('salones', JSON.stringify(salones));
 	renderizarTabla();
@@ -44,7 +40,6 @@ btnGuardar.addEventListener('click', () => {
 	modal.hide();
 });
 
-// renderizar la tabla
 function renderizarTabla() {
 	tablaSalones.innerHTML = '';
 
@@ -57,6 +52,12 @@ function renderizarTabla() {
 			<td>$${salon.precio}</td>
 			<td>${salon.ubicacion}</td>
 			<td>
+				${salon.imagenUrl ? 
+					`<img src="${salon.imagenUrl}" alt="${salon.nombre}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 4px;">` : 
+					'<span class="text-muted">Sin imagen</span>'
+				}
+			</td>
+			<td>
 				<button class="btn btn-danger btn-sm" onclick="eliminarSalon(${salon.id})">
 					Eliminar
 				</button>
@@ -65,8 +66,6 @@ function renderizarTabla() {
 		tablaSalones.appendChild(fila);
 	});
 }
-
-// eliminar un salón
 window.eliminarSalon = function (id) {
 	if (confirm('¿Estás seguro de que deseas eliminar este salón?')) {
 		salones = salones.filter((salon) => salon.id !== id);
