@@ -8,6 +8,7 @@ const btnGuardar = document.getElementById('guardarSalon');
 const tablaSalones = document.getElementById('tablaSalones');
 
 let salones = JSON.parse(localStorage.getItem('salones')) || [];
+let salonEditando = null;
 
 document.addEventListener('DOMContentLoaded', () => {
 	renderizarTabla();
