@@ -20,24 +20,27 @@ btnGuardar.addEventListener('click', () => {
 	const ubicacion = document.getElementById('ubicacion').value;
 	const imagenUrl = document.getElementById('imagenUrl').value;
 
-	const nuevoSalon = {
-		id: Date.now(),
-		nombre,
-		capacidad,
-		descripcion,
-		precio,
-		ubicacion,
-		imagenUrl
-	};
-	salones.push(nuevoSalon);
-	localStorage.setItem('salones', JSON.stringify(salones));
-	renderizarTabla();
-
-	salonForm.reset();
-	const modal = bootstrap.Modal.getInstance(
-		document.getElementById('salonModal')
-	);
-	modal.hide();
+	if (salonEditando) {
+        const index = salones.findIndex(s => s.id === salonEditando);
+        if (index !== -1) {
+            salones[index] = {
+                ...salones[index],
+                nombre, capacidad, descripcion, precio, ubicacion, imagenUrl
+            };
+        }
+        salonEditando = null;
+    } else {
+        const nuevoSalon = {
+            id: Date.now(),
+            nombre, capacidad, descripcion, precio, ubicacion, imagenUrl
+        };
+        salones.push(nuevoSalon);
+    }
+    localStorage.setItem('salones', JSON.stringify(salones));
+    renderizarTabla();
+    salonForm.reset();
+    const modal = bootstrap.Modal.getInstance(document.getElementById('salonModal'));
+    modal.hide();
 });
 
 function renderizarTabla() {
@@ -58,6 +61,10 @@ function renderizarTabla() {
 				}
 			</td>
 			<td>
+				<button class="btn btn-primary btn-sm me-2" onclick="editarSalon(${salon.id})">
+                    Editar
+                </button>
+
 				<button class="btn btn-danger btn-sm" onclick="eliminarSalon(${salon.id})">
 					Eliminar
 				</button>
@@ -72,4 +79,20 @@ window.eliminarSalon = function (id) {
 		localStorage.setItem('salones', JSON.stringify(salones));
 		renderizarTabla();
 	}
+};
+
+window.editarSalon = function(id) {
+    const salon = salones.find(s => s.id === id);
+    if (salon) {
+        salonEditando = id;
+        document.getElementById('nombre').value = salon.nombre;
+        document.getElementById('capacidad').value = salon.capacidad;
+        document.getElementById('descripcion').value = salon.descripcion;
+        document.getElementById('precio').value = salon.precio;
+        document.getElementById('ubicacion').value = salon.ubicacion;
+        document.getElementById('imagenUrl').value = salon.imagenUrl || '';
+
+        const modal = new bootstrap.Modal(document.getElementById('salonModal'));
+        modal.show();
+    }
 };
