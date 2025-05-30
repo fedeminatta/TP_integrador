@@ -30,6 +30,10 @@ a:hover {
 
 /* Reset links */
 
+.text-url {
+	font-size: 12px;
+}
+
 body {
 	font-family: 'Segoe UI', sans-serif;
 	line-height: 1.6;
@@ -78,6 +82,7 @@ nav a:hover {
 	text-align: center;
 	padding: 2rem 1rem;
 	background-color: #e6f2ff;
+	margin-top: 20px;
 }
 
 .hero img {
@@ -160,14 +165,14 @@ nav a:hover {
 }
 
 .form-control {
-    transition: all 0.3s ease;
-    border: 1px solid #ced4da;
+	transition: all 0.3s ease;
+	border: 1px solid #ced4da;
 }
 
 .form-control:hover {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-    background-color: #f8f9fa;
+	border-color: #007bff;
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+	background-color: #f8f9fa;
 }
 
 .form-contacto form {
@@ -183,9 +188,9 @@ nav a:hover {
 	transition: all 0.3s ease;
 }
 
-.form-label:hover{
-	color: #007bff; 
-    transform: translateX(5px); 
+.form-label:hover {
+	color: #007bff;
+	transform: translateX(5px);
 }
 
 .form-contacto input,
@@ -218,9 +223,9 @@ nav a:hover {
 }
 
 .mapa-contacto:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 @media (min-width: 768px) {
 	.info-y-mapa {

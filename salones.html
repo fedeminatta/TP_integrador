@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
   <header class="mt-5">
     <nav class="navbar">
@@ -95,11 +97,17 @@
                 <label for="ubicacion" class="form-label">Ubicación</label>
                 <input type="text" class="form-control" id="ubicacion" required>
               </div>
-              <div class="mb-3">
-                <label for="imagenUrl" class="form-label">URL de la Imagen</label>
-                <input type="url" class="form-control" id="imagenUrl" 
-                       placeholder="https://ejemplo.com/imagen.jpg">
-                <div class="form-text">Ingresa la URL completa de la imagen del salón</div>
+              <div class="mb-3 overflow-hidden">
+                <label for="imagenUrl" class="form-label">URL de la
+                  Imagen</label>
+
+                <input type="url" class="form-control" id="imagenUrl"
+                  placeholder="https://ejemplo.com/imagen.jpg">
+                <div class="form-text">Ingresa la URL completa de la imagen del
+                  salón</div>
+                <span class="fst-italic opacity-75 text-wrap text-url">Url de
+                  ej:
+                  https://www.inolvidables15.com/assets/images/2087_18960fotoalgr.jpg</span>
               </div>
             </form>
           </div>
@@ -160,4 +168,5 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./Js/adminSalones.js"></script>
 </body>
+
 </html>
