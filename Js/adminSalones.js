@@ -59,7 +59,11 @@ btnGuardar.addEventListener('click', () => {
 		salones.push(nuevoSalon);
 	}
 
-	localStorage.setItem('salones', JSON.stringify(salones));
+	// Solo se guarda los que no son iniciales
+	const salonesParaGuardar = salones.filter(
+		(s) => !String(s.id).startsWith('init')
+	);
+	localStorage.setItem('salones', JSON.stringify(salonesParaGuardar));
 
 	renderizarTabla();
 	salonForm.reset();
