@@ -485,6 +485,9 @@ footer {
 	position: relative;
 }
 
+.navbar-brand {
+	margin: 0 auto 15px;
+}
 .navbar-brand h1 {
 	margin: 0;
 	font-size: 1.5rem;
