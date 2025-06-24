@@ -82,7 +82,7 @@ nav a:hover {
 	text-align: center;
 	padding: 2rem 1rem;
 	background-color: #e6f2ff;
-	margin-top: 20px;
+	margin-top: 120px;
 }
 
 .hero img {
@@ -151,7 +151,7 @@ nav a:hover {
 
 /* ### Página de contacto ### */
 .contacto-page {
-	margin-top: 2rem;
+	margin-top: 140px;
 	margin-bottom: 2rem;
 }
 
@@ -247,7 +247,7 @@ nav a:hover {
 .main_servicios {
 	background-color: rgb(250, 232, 232);
 	padding-inline: 20px;
-	padding-top: 140px;
+	padding-top: 160px;
 	padding-bottom: 60px;
 	width: 100%;
 	overflow-x: hidden;
@@ -545,7 +545,8 @@ footer {
 /* Presupuesto */
 .form-section {
 	max-width: 600px;
-	margin: 3rem auto;
+	margin: 6rem auto;
+	margin-top: 120px;
 	padding: 2rem;
 	border-radius: 8px;
 	background: #fff;
