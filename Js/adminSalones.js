@@ -1,6 +1,6 @@
 // Proteger acceso si no hay sesion
-if (sessionStorage.getItem('sesionIniciada') !== 'true') {
-	alert('Debes iniciar sesión primero');
+if (!sessionStorage.getItem('accessToken')) {
+	alert('Debes iniciarr sesión primero');
 	window.location.href = 'login.html';
 }
 

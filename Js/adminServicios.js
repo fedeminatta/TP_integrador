@@ -1,4 +1,4 @@
-if (sessionStorage.getItem('sesionIniciada') !== 'true') {
+if (!sessionStorage.getItem('accessToken')) {
 	alert('Debes iniciar sesión primero');
 	window.location.href = 'login.html';
 }
