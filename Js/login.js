@@ -20,11 +20,19 @@ form.addEventListener('submit', async (e) => {
 	   const data = await response.json();
 	   console.log('Repuesta API:', data); //es para Debug
 
-	   if(data.accessToken){
-		sessionStorage.setItem('accessToken', data.accessToken);
-		sessionStorage.setItem('sesionIniciada', 'true');
-		window.location.href = 'salones.html';
-	   }else{
+	 if(data.accessToken){
+  sessionStorage.setItem('accessToken', data.accessToken);
+  sessionStorage.setItem('sesionIniciada', 'true');
+
+  
+  const nextPage = sessionStorage.getItem('nextPage') || 'salones.html';
+
+  
+  sessionStorage.removeItem('nextPage');
+
+  window.location.href = nextPage;
+}
+else{
 		loginError.textContent = 'Usuario o contraseña incorrectos';
 		loginError.classList.remove('d.none');
 	   }
