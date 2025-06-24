@@ -29,6 +29,26 @@ const salonesIniciales = [
 		ubicacion: 'Zona Sur',
 		imagenUrl: 'img/salon3.jpg',
 	},
+	{
+		id: 'init-4',
+		nombre: 'Salón Aventuras del Sur',
+		capacidad: 120,
+		descripcion:
+			'Este salón combina espacios techados con una amplia galería abierta, ideal para eventos que incluyen juegos al aire libre. Con decoración náutica, banderines y una zona de juegos inflables, es perfecto para cumpleaños activos y temáticos.',
+		precio: 65000,
+		ubicacion: 'Barrio San Martín',
+		imagenUrl: 'img/salon4.jpg',
+	},
+	{
+		id: 'init-5',
+		nombre: 'Salón Pequeño Planeta',
+		capacidad: 60,
+		descripcion:
+			'Un salón diseñado especialmente para los más chicos, con paredes pintadas de galaxias, rincones de lectura y luces tenues que simulan estrellas. Ideal para eventos más íntimos o fiestas en edad preescolar.',
+		precio: 45000,
+		ubicacion: 'Villa del Parque',
+		imagenUrl: 'img/salon5.jpg',
+	},
 ];
 
 export function obtenerTodosLosSalones() {
