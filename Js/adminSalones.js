@@ -1,7 +1,8 @@
+import { showloginModal } from "./autenticacion.js";
 // Proteger acceso si no hay sesion
-if (!sessionStorage.getItem('accessToken')) {
-	alert('Debes iniciarr sesión primero');
-	window.location.href = 'login.html';
+const accessToken = sessionStorage.getItem('accessToken');
+if (!accessToken) {
+	showloginModal(window.location.pathname);
 }
 
 // Elementos del DOM
