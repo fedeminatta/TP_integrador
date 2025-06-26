@@ -98,7 +98,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			total: total,
 			tel: document.getElementById('tel').value,
 			nombre: document.getElementById('nombre').value,
-			fecha: new Date().toLocaleString('es-AR'),
+			tematica: document.getElementById('tematica').value,
+			fecha: document.getElementById('fecha').value,
+			email: document.getElementById('email').value,
+			fechaCreacion: new Date().toLocaleString('es-AR'),
 		};
 
 		// Guardar en localStorage
@@ -108,6 +111,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		presupuestosGuardados.push(presupuesto);
 
 		localStorage.setItem('presupuestos', JSON.stringify(presupuestosGuardados));
+
+		console.log('Presupuesto Guardado en LS: ', presupuesto);
 
 		alert('¡Gracias por reservar! El total estimado es de $' + total);
 
