@@ -1,7 +1,6 @@
+import { showloginModal } from "./autenticacion.js";
 if (!sessionStorage.getItem('accessToken')) {
-  alert('Debes iniciar sesión primero');
-  sessionStorage.setItem('nextPage', 'usuarios.html');
-  window.location.href = 'login.html';
+  showloginModal(window.location.pathname);
 }
 
 fetch('https://dummyjson.com/users')

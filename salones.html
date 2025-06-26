@@ -169,9 +169,15 @@
       </div>
     </div>
   </footer>
+  <script type="module">
+    import { showloginModal } from './js/autenticacion.js';
+    if(!sessionStorage.getItem(accesToken)){
+      showloginModal();
+    }
+  </script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="module" src="./Js/adminSalones.js"></script>
+  <script type="module" src="./js/adminSalones.js"></script>
 </body>
 
 </html>

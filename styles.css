@@ -573,3 +573,19 @@ footer {
 	margin-top: 1rem;
 	text-align: right;
 }
+
+
+.modal-blur {
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	background: #4f4e4ef5;
+}
+
+.modal.show{
+	background-color: #4f4e4ef5;
+}
+
+.modal.dialog{
+	backdrop-filter: none !important;
+	-webkit-backdrop-filter: none !important;
+}

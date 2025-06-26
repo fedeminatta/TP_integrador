@@ -24,16 +24,13 @@ form.addEventListener('submit', async (e) => {
   sessionStorage.setItem('accessToken', data.accessToken);
   sessionStorage.setItem('sesionIniciada', 'true');
 
-  
-  const nextPage = sessionStorage.getItem('nextPage') || 'salones.html';
-
-  
-  sessionStorage.removeItem('nextPage');
-
-  window.location.href = nextPage;
+  const returnUrl = sessionStorage.getItem('returnUrl') || 'index.html';
+  sessionStorage.removeItem('returnUrl'); 
+  window.location.href = returnUrl;
 }
 else{
 		loginError.textContent = 'Usuario o contraseña incorrectos';
+		alert('Usuario o contraseña incorrectos');
 		loginError.classList.remove('d.none');
 	   }
 	}catch (error) {

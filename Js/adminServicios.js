@@ -1,6 +1,6 @@
+import { showloginModal } from "./autenticacion.js";
 if (!sessionStorage.getItem('accessToken')) {
-	alert('Debes iniciar sesión primero');
-	window.location.href = 'login.html';
+	showloginModal(window.location.pathname);
 }
 
 const servicioForm = document.getElementById('servicioForm');
