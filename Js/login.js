@@ -30,6 +30,7 @@ form.addEventListener('submit', async (e) => {
 }
 else{
 		loginError.textContent = 'Usuario o contraseña incorrectos';
+		alert('Usuario o contraseña incorrectos');
 		loginError.classList.remove('d.none');
 	   }
 	}catch (error) {
