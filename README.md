@@ -21,3 +21,6 @@ Habiendo concluído las etapas de análisis y diseño se le solicita llevar a ca
 web. El objetivo es crear interfaces de usuario interactivas, con diseño responsivo o adaptativo que persista
 datos utilizando la API LocalStorage y API/s REST externa/s, permitiendo a los usuarios explorar el catálogo
 de manera sencilla
+
+#### Video Explicativo:
+https://drive.google.com/file/d/1tS8I7y8nxdpu_AmrO6lRv29-8FneeAm2/view?usp=sharing
