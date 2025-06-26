@@ -1,7 +1,5 @@
-import { showloginModal } from "./autenticacion.js";
-// Proteger acceso si no hay sesion
-const accessToken = sessionStorage.getItem('accessToken');
-if (!accessToken) {
+import { showloginModal } from './autenticacion.js';
+if (!sessionStorage.getItem('accessToken')) {
 	showloginModal(window.location.pathname);
 }
 
